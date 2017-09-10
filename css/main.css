@@ -1,0 +1,86 @@
+html,body { 
+	/*background: url('../img/bg.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;*/
+}
+
+body
+{
+	color: #EEE;
+	background-color: #000;
+	/* background-image: url('../img/bg.png'); */
+	font-family: 'Roboto Condensed', sans-serif;
+	font-weight: 400;
+	font-size: 0.85rem;
+	padding: 0;
+	margin: 0;
+}
+
+
+
+/*
+	Foundation
+*/
+
+.row
+{
+	
+}
+
+.columns
+{
+	padding: 0px;
+}
+
+.column
+{
+	padding: 0px;
+}
+
+
+
+/*
+	Settings
+*/
+
+.bold
+{
+	font-weight: 700;
+}
+
+.thin
+{
+	font-weight: 200;
+}
+
+.large
+{
+	font-size: 1rem;
+}
+
+.small
+{
+	font-size: 0.75rem;
+}
+
+.progress.orange .progress-meter
+{
+	background-color: #e67e22;
+}
+
+.progress.yellow .progress-meter
+{
+	background-color: #f1c40f;
+}
+
+.progress.green .progress-meter
+{
+	background-color: #27ae60;
+}
+
+.progress.purple .progress-meter
+{
+	background-color: #8e44ad;
+}

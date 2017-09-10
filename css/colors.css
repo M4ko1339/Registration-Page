@@ -1,0 +1,377 @@
+/*
+	Black	
+*/
+
+.black
+{
+	color: #000;
+}
+
+/*
+	White	
+*/
+
+.white
+{
+	color: #FFF;
+}
+
+/*
+	Grey	
+*/
+
+.grey
+{
+	color: #888;
+}
+
+/*
+	Red	
+*/
+
+.red
+{
+	color: #e74c3c;
+}
+
+/*
+	Green	
+*/
+
+.green
+{
+	color: #2ecc71;
+}
+
+/*
+	Blue	
+*/
+
+.blue
+{
+	color: #3498db;
+}
+
+/*
+	Orange	
+*/
+
+.orange
+{
+	color: #e67e22;
+}
+
+/*
+	Purple	
+*/
+
+.purple
+{
+	color: #9b59b6;
+}
+
+/*
+	Yellow	
+*/
+
+.yellow
+{
+	color: #f1c40f;
+}
+
+/*
+	Dark Yellow
+*/
+
+.darkyellow
+{
+	color: #CCCC00;
+}
+
+/*
+	Turquoise	
+*/
+
+.turquoise
+{
+	color: #1abc9c;
+}
+
+/*
+	Midnight Blue	
+*/
+
+.midnight
+{
+	color: #2c3e50;
+}
+
+
+
+/*
+	Background Colors
+*/
+
+/*
+	White
+*/
+
+.bg-white
+{
+	background-color: #FFF;
+}
+
+/*
+	Turquoise
+*/
+
+.bg-turquoise
+{
+	background-color: #1abc9c;
+}
+
+/*
+	Yellow
+*/
+
+.bg-yellow
+{
+	background-color: #f1c40f;
+}
+
+/*
+	Light Yellow
+*/
+
+.bg-lightyellow
+{
+	background-color: #FFF569;
+}
+
+/*
+	Dark Yellow
+*/
+
+.bg-darkyellow
+{
+	background-color: #CCCC00;
+}
+
+/*
+	Orange
+*/
+
+.bg-orange
+{
+	background-color: #e67e22;
+}
+
+/*
+	Red
+*/
+
+.bg-red
+{
+	background-color: #e74c3c;
+}
+
+/*
+	Blue
+*/
+
+.bg-blue
+{
+	background-color: #3498db;
+}
+
+/*
+	Lightblue
+*/
+
+.bg-lightblue
+{
+	background-color: #5FAEE3;
+}
+
+
+
+/*
+	Faction Colors
+*/
+
+.alliance
+{
+	color: #3498db;
+}
+
+.horde
+{
+	color: #e74c3c;
+}
+
+
+
+/*
+	Class Colors
+*/
+
+.warrior
+{
+	color: #C79C6E;
+}
+
+.warlock
+{
+	color: #9482C9;
+}
+
+.shaman
+{
+	color: #0070DE;
+}
+
+.rogue
+{
+	color: #FFF569;
+}
+
+.priest
+{
+	color: #FFFFFF;
+}
+
+.paladin
+{
+	color: #F58CBA;
+}
+
+.mage
+{
+	color: #69CCF0;
+}
+
+.hunter
+{
+	color: #ABD473;
+}
+
+.druid
+{
+	color: #FF7D0A;
+}
+
+.deathknight
+{
+	color: #C41F3B;
+}
+
+
+
+/*
+	Quality Colors
+*/
+
+/*
+	Poor
+*/
+
+.poor
+{
+	color: #9d9d9d;
+}
+
+/*
+	Common
+*/
+
+.common
+{
+	color: #FFF;
+}
+
+/*
+	Uncommon
+*/
+
+.uncommon
+{
+	color: #1eff00;
+}
+
+/*
+	Rare
+*/
+
+.rare
+{
+	color: #0070ff;
+}
+
+/*
+	Epic
+*/
+
+.epic
+{
+	color: #a335ee;
+}
+
+/*
+	Legendary
+*/
+
+.legendary
+{
+	color: #ff8000;
+}
+
+/*
+	Artifact
+*/
+
+.artifact
+{
+	color: #e6cc80;
+}
+
+/*
+	Heirloom
+*/
+
+.heirloom
+{
+	color: #e6cc80;
+}
+
+
+
+/*
+	User Ranks
+*/
+
+/*
+	Beta Tester
+*/
+
+.betatester
+{
+	color: #FFBF00;
+}
+
+/*
+	Moderator
+*/
+
+.moderator
+{
+	color: #0000CC;
+}
+
+/*
+	Administrator
+*/
+
+.administrator
+{
+	color: #AA0000;
+}
