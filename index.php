@@ -44,7 +44,7 @@ include('inc/functions.php');
 					<input type="password" name="re-password" />
 
 					<center>
-						<!-- Captcha -->
+						<div class="g-recaptcha" data-sitekey="<?php echo CAPTCHA_CLIENT_ID; ?>"></div>
 						<br>
 						<input type="submit" name="register" class="small button" value="Register" />
 					</center>
@@ -63,5 +63,6 @@ include('inc/functions.php');
 <script type="text/javascript" src="js/vendor/what-input.js"></script>
 <script type="text/javascript" src="js/vendor/foundation.js"></script>
 <script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src='https://www.google.com/recaptcha/api.js'></script>
 </body>
 </html>

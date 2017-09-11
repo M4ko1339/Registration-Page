@@ -19,10 +19,8 @@ function Register()
 						return false;
 					}
 				}
-				else
-				{
-					return false;
-				}
+
+				return false;
 			}
 
 			function ValidateUsername($username)
@@ -38,10 +36,21 @@ function Register()
 						return false;
 					}
 				}
-				else
+
+				return false;
+			}
+
+			function Captcha($secret, $captcha, $ip)
+			{
+				$response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=" . $secret . "&response=" . $captcha . "&remoteip=" . $lastip);
+				$decode   = json_decode($response, true);
+
+				if(intval($decode['success']) == 1)
 				{
-					return false;
+					return true;
 				}
+				
+				return false;
 			}
 
 			global $con;
@@ -50,6 +59,7 @@ function Register()
 			$email      = $_POST['email'];
 			$password   = $_POST['password'];
 			$repassword = $_POST['re-password'];
+			$captcha    = $_POST['g-recaptcha-response'];
 			$ip_address = $_SERVER['REMOTE_ADDR'];
 			$secret     = CAPTCHA_SECRET;
 			$expansion  = EXPANSION;
@@ -64,18 +74,25 @@ function Register()
 
 				if($data->fetchColumn() == 0)
 				{
-					$data = $con->prepare('INSERT INTO account (username, sha_pass_hash, email, last_ip, expansion) 
-						VALUES(:username, :password, :email, :ip, :expansion)');
-					$data->execute(array(
-						':username'  => $username,
-						':password'  => sha1(strtoupper($username) . ':' . strtoupper($password)),
-						':email'     => $email,
-						':ip'        => $ip_address,
-						':expansion' => $expansion
-					));
+					if(Captcha($secret, $captcha, $ip_address))
+					{
+						$data = $con->prepare('INSERT INTO account (username, sha_pass_hash, email, last_ip, expansion) 
+							VALUES(:username, :password, :email, :ip, :expansion)');
+						$data->execute(array(
+							':username'  => $username,
+							':password'  => sha1(strtoupper($username) . ':' . strtoupper($password)),
+							':email'     => $email,
+							':ip'        => $ip_address,
+							':expansion' => $expansion
+						));
 
-					echo '<div class="callout success">' . SUCCESS_MESSAGE . '</div>';
-					echo '<div class="callout warning">' . REALMLIST . '</div>';
+						echo '<div class="callout success">' . SUCCESS_MESSAGE . '</div>';
+						echo '<div class="callout warning">' . REALMLIST . '</div>';
+					}
+					else
+					{
+						echo '<div class="callout alert">Capctha was invalid!</div>';
+					}
 				}
 				else
 				{
@@ -93,7 +110,5 @@ function Register()
 		}
 	}
 }
-
-
 
 ?>
