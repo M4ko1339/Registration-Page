@@ -64,7 +64,7 @@ function Register()
 			$secret     = CAPTCHA_SECRET;
 			$expansion  = EXPANSION;
 
-			if(ValidateUsername() && ValidateEmail())
+			if(ValidateUsername($username) && ValidateEmail($email))
 			{
 				$data = $con->prepare('SELECT COUNT(*) FROM account WHERE username = :username OR email = :email');
 				$data->execute(array(
