@@ -40,7 +40,7 @@ function Register()
 				return false;
 			}
 
-			function Captcha($secret, $captcha, $ip)
+			function Captcha($secret, $captcha, $lastip)
 			{
 				$response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=" . $secret . "&response=" . $captcha . "&remoteip=" . $lastip);
 				$decode   = json_decode($response, true);
